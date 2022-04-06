@@ -1,0 +1,9 @@
+services:
+  webapp:
+    container_name: spark-structured-streaming
+    build: .
+    command: start.sh jupyter lab --LabApp.token=''
+    ports:
+      - "8888:8888"
+    environment:
+      PYARROW_IGNORE_TIMEZONE: 1
